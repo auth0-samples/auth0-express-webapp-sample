@@ -26,10 +26,16 @@ app.use(session({
   secure: process.env.NODE_ENV === 'production'
 }));
 
-app.use(auth({
+const config = {
   required: false,
   auth0Logout: true
-}));
+};
+
+if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
+  config.baseURL = `http://localhost:${process.env.PORT}`;
+}
+
+app.use(auth(config));
 
 // Middleware to make the `user` object available for all views
 app.use(function (req, res, next) {
