@@ -3,7 +3,6 @@ const express = require('express');
 const http = require('http');
 const logger = require('morgan');
 const path = require('path');
-const session = require('cookie-session');
 const router = require('./routes/index');
 const { auth } = require('express-openid-connect');
 
@@ -16,15 +15,7 @@ app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
 app.use(express.static(path.join(__dirname, 'public')));
-app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-
-app.use(session({
-  name: process.env.SESSION_NAME  || 'express-openid-connect',
-  keys: [process.env.SESSION_SECRET || 'Set a SESSION_SECRET value in env'],
-  maxAge: 24 * 60 * 60 * 1000,
-  secure: process.env.NODE_ENV === 'production'
-}));
 
 const config = {
   required: false,
