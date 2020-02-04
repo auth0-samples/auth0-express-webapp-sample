@@ -1,6 +1,5 @@
 {
   "name": "auth0-express-webapp-sample",
-  "version": "0.6.0",
   "scripts": {},
   "dependencies": {
     "debug": "~2.6.9",
@@ -10,13 +9,5 @@
     "express-openid-connect": "^0.6.0",
     "http-errors": "~1.6.2",
     "morgan": "~1.9.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.7.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.20.0",
-    "eslint-plugin-node": "^7.0.1",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
   }
 }
