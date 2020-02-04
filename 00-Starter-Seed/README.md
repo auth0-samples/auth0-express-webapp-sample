@@ -2,8 +2,6 @@
 
 ## Running the Sample
 
-If you don't yet have an Auth0 account, [sign up](https://auth0.com/signup) for free.
-
 Install the dependencies with npm:
 
 ```bash

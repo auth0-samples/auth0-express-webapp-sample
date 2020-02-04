@@ -1,10 +1,14 @@
 const dotenv = require('dotenv');
 const express = require('express');
-const http = require('http');
+const https = require('https');
 const logger = require('morgan');
 const path = require('path');
+const fs = require('fs');
 const router = require('./routes/index');
 const { auth } = require('express-openid-connect');
+
+const key = fs.readFileSync('./localhost-key.pem');
+const cert = fs.readFileSync('./localhost.pem');
 
 dotenv.load();
 
@@ -22,8 +26,9 @@ const config = {
   auth0Logout: true
 };
 
+const port = process.env.PORT || 3000;
 if (!config.baseURL && !process.env.BASE_URL && process.env.PORT && process.env.NODE_ENV !== 'production') {
-  config.baseURL = `http://localhost:${process.env.PORT}`;
+  config.baseURL = `https://localhost:${port}`;
 }
 
 app.use(auth(config));
@@ -52,9 +57,7 @@ app.use(function (err, req, res, next) {
   });
 });
 
-const port = process.env.PORT || '3000';
-
-http.createServer(app)
+https.createServer({key, cert}, app)
   .listen(port, () => {
-    console.log(`listening on http://localhost:${port}`);
+    console.log(`Listening on ${config.baseURL}`);
   });
