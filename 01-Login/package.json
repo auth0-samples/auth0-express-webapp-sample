@@ -2,6 +2,8 @@
   "name": "auth0-express-webapp-sample",
   "scripts": {},
   "dependencies": {
+    "body-parser": "^1.19.0",
+    "csurf": "^1.11.0",
     "debug": "~2.6.9",
     "dotenv": "^6.1.0",
     "ejs": "^2.7.4",

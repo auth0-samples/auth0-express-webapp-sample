@@ -9,3 +9,9 @@
 <% } %>
 
 <%- include('partials/footer') -%>
+
+<form action="/process" method="POST">
+    <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+    Favorite color: <input type="text" name="favoriteColor">
+    <button type="submit">Submit</button>
+</form>
