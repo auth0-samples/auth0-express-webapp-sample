@@ -19,7 +19,7 @@ npm install
 Rename `.env.example` to `.env` and replace the values for `CLIENT_ID` and `ISSUER_BASE_URL` with your Auth0 credentials:
 
 ```bash
-mv .env.example .env
+mv .env-sample .env
 ```
 
 Run the app:
