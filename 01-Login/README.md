@@ -1,5 +1,7 @@
 # Express OpenID Connect sample
 
+See a detailed walk-through of this app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
+
 ## Set up a secure local server
 
 Applications that handle sensitive data must be served over secure channels. This includes local applications as they may handle the same sensitive data and should be built as close to production-ready as possible.
