@@ -2,12 +2,6 @@
 
 See a detailed walk-through of this app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
 
-## Set up a secure local server
-
-Applications that handle sensitive data must be served over secure channels. This includes local applications as they may handle the same sensitive data and should be built as close to production-ready as possible.
-
-Follow our [Secure Local Development guide](https://auth0.com/docs/libraries/secure-local-development) through the "Generate an SSL Certificate" section to create a `localhost.pem` certificate and a `localhost-key.pem` key. Make sure these are located in the application root (where `server.js` is located).
-
 ## Running the Sample
 
 If you don't yet have an Auth0 account, [sign up](https://auth0.com/signup) for free.
@@ -18,7 +12,8 @@ Install the dependencies with npm:
 npm install
 ```
 
-Rename `.env.example` to `.env` and replace the values for `CLIENT_ID` and `ISSUER_BASE_URL` with your Auth0 credentials:
+Rename `.env.example` to `.env` and replace the value for `APP_SESSION_SECRET` and `ISSUER_BASE_URL` with a randomly rengerated string.  You can generate one on the command line with the following `openssl rand -hex 32`
+
 
 ```bash
 mv .env.example .env
@@ -31,8 +26,6 @@ npm start
 ```
 
 The app will be served at `localhost:3000`.
-
-If you see en error like `no such file or directory, open './localhost-key.pem`, you either did not generate certificates or they are not in the right location. See the **Set up a secure local server** section above.
 
 ## Support + Feedback
 
