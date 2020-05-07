@@ -16,7 +16,7 @@ Rename `.env.example` to `.env` and replace the value for `APP_SESSION_SECRET` a
 
 
 ```bash
-mv .env.example .env
+mv .env-sample .env
 ```
 
 Run the app:
