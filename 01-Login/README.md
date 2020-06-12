@@ -1,18 +1,21 @@
-# Express OpenID Connect sample
+# Express OpenID Connect Webapp Sample
 
-See a detailed walk-through of this app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
+See a detailed walk-through of this sample app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
 
-## Running the Sample
+## Running This Sample Locally
 
-If you don't yet have an Auth0 account, [sign up](https://auth0.com/signup) for free.
+> If you don't yet have an Auth0 account, you can [sign up](https://auth0.com/signup) for free.
 
-Install the dependencies with npm:
+1. Install the dependencies with npm:
 
 ```bash
 npm install
 ```
 
-Rename `.env.example` to `.env` and replace the following values:
+2. Rename `.env.example` to `.env` and replace or check the following values. 
+
+> If you downloaded this sample app directly from Auth0 Manage Dashboard, or from Auth0 Docs _and_ you chose the Auth0 application you're creating this sample for, then you can check these are already configured correctly: 
+
 * `CLIENT_ID` - your Auth0 application client id
 * `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
 * `APP_SESSION_SECRET` - a randomly rengerated string.  You can generate one on the command line with the following `openssl rand -hex 32`
@@ -22,13 +25,13 @@ Rename `.env.example` to `.env` and replace the following values:
 mv .env-sample .env
 ```
 
-Run the app:
+3. Run the sample app:
 
 ```bash
 npm start
 ```
 
-The app will be served at `localhost:3000`.
+The sample app will be served at `localhost:3000`.
 
 ## Support + Feedback
 
