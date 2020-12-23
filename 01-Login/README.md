@@ -13,13 +13,13 @@ npm install
 ```
 
 Rename `.env.example` to `.env` and replace the following values:
-* `CLIENT_ID` - your Auth0 application client id
-* `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
-* `APP_SESSION_SECRET` - a randomly rengerated string.  You can generate one on the command line with the following `openssl rand -hex 32`
 
+- `CLIENT_ID` - your Auth0 application client id
+- `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
+- `APP_SESSION_SECRET` - a randomly rengerated string. You can generate one on the command line with the following `openssl rand -hex 32`
 
 ```bash
-mv .env-sample .env
+mv .env.example .env
 ```
 
 Run the app:
