@@ -1,18 +1,21 @@
-# Express OpenID Connect sample
+# Express OpenID Connect Webapp Sample
 
-See a detailed walk-through of this app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
+This sample demonstrates authentication for an Express Node.js app. The sample quickly shows how to log in, log out, and view profile information of the logged-in user.
 
-## Running the Sample
+See a detailed walk-through of this sample app on the [Express Quickstart](https://auth0.com/docs/quickstart/webapp/express).
 
-If you don't yet have an Auth0 account, [sign up](https://auth0.com/signup) for free.
+## Running This Sample Locally
 
-Install the dependencies with npm:
+1. Install the dependencies with npm:
 
 ```bash
 npm install
 ```
 
-Rename `.env.example` to `.env` and replace the following values:
+
+2. Rename `.env.example` to `.env` and replace or check the following values. 
+
+> ⚠️ Note: If you downloaded this sample app directly from Auth0 Manage Dashboard, or from Auth0 Docs _and_ you chose the Auth0 application you're creating this sample for, then you can check these are configured already: 
 
 - `CLIENT_ID` - your Auth0 application client id
 - `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
@@ -22,13 +25,13 @@ Rename `.env.example` to `.env` and replace the following values:
 mv .env.example .env
 ```
 
-Run the app:
+3. Run the sample app:
 
 ```bash
 npm start
 ```
 
-The app will be served at `localhost:3000`.
+The sample app will be served at `localhost:3000`.
 
 ## Support + Feedback
 
