@@ -12,17 +12,17 @@ See a detailed walk-through of this sample app on the [Express Quickstart](https
 npm install
 ```
 
+
 2. Rename `.env.example` to `.env` and replace or check the following values. 
 
 > ⚠️ Note: If you downloaded this sample app directly from Auth0 Manage Dashboard, or from Auth0 Docs _and_ you chose the Auth0 application you're creating this sample for, then you can check these are configured already: 
 
-* `CLIENT_ID` - your Auth0 application client id
-* `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
-* `APP_SESSION_SECRET` - a randomly rengerated string.  You can generate one on the command line with the following `openssl rand -hex 32`
-
+- `CLIENT_ID` - your Auth0 application client id
+- `ISSUER_BASE_URL` - absolute URL to your Auth0 application domain (ie: `https://accountName.auth0.com`)
+- `APP_SESSION_SECRET` - a randomly rengerated string. You can generate one on the command line with the following `openssl rand -hex 32`
 
 ```bash
-mv .env-sample .env
+mv .env.example .env
 ```
 
 3. Run the sample app:

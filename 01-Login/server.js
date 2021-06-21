@@ -3,7 +3,6 @@ const express = require('express');
 const http = require('http');
 const logger = require('morgan');
 const path = require('path');
-const fs = require('fs');
 const router = require('./routes/index');
 const { auth } = require('express-openid-connect');
 
@@ -19,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.json());
 
 const config = {
-  required: false,
+  authRequired: false,
   auth0Logout: true
 };
 
@@ -32,7 +31,7 @@ app.use(auth(config));
 
 // Middleware to make the `user` object available for all views
 app.use(function (req, res, next) {
-  res.locals.user = req.openid.user;
+  res.locals.user = req.oidc.user;
   next();
 });
 
