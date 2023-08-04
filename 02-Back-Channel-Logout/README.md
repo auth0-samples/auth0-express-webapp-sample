@@ -10,7 +10,9 @@ The sample demonstrates the following:
 - Notice that you are automatically logged out of App B
 
 ### Screencast
-![Screencast](./screencast.mp4)
+
+https://github.com/auth0-samples/auth0-express-webapp-sample/assets/1299658/24774526-7235-4c77-94c5-5ceecf0a5109
+
 
 ## Running This Sample Locally
 
