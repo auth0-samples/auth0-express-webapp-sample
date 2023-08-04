@@ -10,7 +10,7 @@ The sample demonstrates the following:
 - Notice that you are automatically logged out of App B
 
 ### Screencast
-![screencast.mp4](screencast.mp4)
+![Screencast](./screencast.mp4)
 
 ## Running This Sample Locally
 
