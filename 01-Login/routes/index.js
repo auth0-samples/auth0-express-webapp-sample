@@ -1,16 +1,18 @@
 var router = require('express').Router();
-const { requiresAuth } = require('express-openid-connect');
+const { requiresAuth } = require('@auth0/auth0-express');
 
-router.get('/', function (req, res, next) {
+router.get('/', async function (req, res, next) {
+  const user = await req.auth0.client.getUser();
   res.render('index', {
     title: 'Auth0 Webapp sample Nodejs',
-    isAuthenticated: req.oidc.isAuthenticated()
+    isAuthenticated: !!user
   });
 });
 
-router.get('/profile', requiresAuth(), function (req, res, next) {
+router.get('/profile', requiresAuth(), async function (req, res, next) {
+  const user = await req.auth0.client.getUser();
   res.render('profile', {
-    userProfile: JSON.stringify(req.oidc.user, null, 2),
+    userProfile: JSON.stringify(user, null, 2),
     title: 'Profile page'
   });
 });
